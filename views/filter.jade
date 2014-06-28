@@ -1,6 +1,6 @@
 extends layout
 
-script(src='/public/javascripts/filterpage.js')
+script(src='/public/javascripts/filter.js')
 block content
 	#filterview
 		form
@@ -12,4 +12,4 @@ block content
 								input(type='checkbox', checked, id=filter)
 								label(for=filter) #{filter}
 			br
-			button.white-box(type='submit') Save Filter
+			a.button.white-box(type='submit', href="/", id="save") Save Filter
