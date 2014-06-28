@@ -4,33 +4,33 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res) {	
 	var events= [{
-		name: 'Event Name #1',
+		name: 'NCAA Collegiate Track Meet',
 		image: '/images/profile-pic.jpg',
-		desc: 'Some sample data',
+		desc: 'Time and scorekeepers are needed.',
 		sDate: '2014-09-09',
 		eDate: '2015-09-09',
-		webUrl: 'slkdjf;aslkdfj.com'
+		webUrl: 'http://www.ncaa.com/track/meet'
 	},{
-		name: 'Event Name #2',
+		name: 'Super Bowl XVII',
 		image: '/images/profile-pic.jpg',
-		desc: 'Some sample data',
+		desc: 'It\'s almost superbowl season. We need volunteers for all kinds of tasks.',
 		sDate: '2014-09-09',
 		eDate: '2015-09-09',
-		webUrl: 'slkdjf;aslkdfj.com'
+		webUrl: 'http://www.superbowl.com/xvii'
 	},{
-		name: 'Event Name #3',
+		name: 'Bankers Life BBall Tourney',
 		image: '/images/profile-pic.jpg',
-		desc: 'Some sample data',
+		desc: 'COme help out at the 25th annual Pacersbasketball community tournament.',
 		sDate: '2014-09-09',
 		eDate: '2015-09-09',
-		webUrl: 'slkdjf;aslkdfj.com'
+		webUrl: 'http://www.pacersbasketball.com'
 	},{
-		name: 'Event Name #4',
+		name: 'Special Olympics',
 		image: '/images/profile-pic.jpg',
-		desc: 'Some sample data',
+		desc: 'Special olympics are a longstanding tradition in the Indianapolis community',
 		sDate: '2014-09-09',
 		eDate: '2015-09-09',
-		webUrl: 'slkdjf;aslkdfj.com'
+		webUrl: 'http://www.specialolympics.com/about'
 	}];
    if(req.session.loggedIn)
   		res.render('profile', { title: 'Profile', events: events });
