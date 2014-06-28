@@ -1,10 +1,11 @@
 extends layout
 
-body#filterview
-	block content
+script(src='/public/javascripts/filterpage.js')
+block content
+	div#filterview
 		form
 			div#checklist
-				each val in ['hello', 'hi', 'boobs', 'fireball', 'balls', 'pranks with friends', 'solid'] //get tags
+				each val in ['Professional', 'Collegiate', 'High School', 'Outdoors', 'Indoors', 'Morning', 'Afternoon', 'Evening', 'Night', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 						input(type='checkbox', checked, id=val)
 						label(for=val) #{val}
 						br
