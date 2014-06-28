@@ -6,6 +6,7 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
 		script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 		script(src="/javascripts/volunteer.js")
+		script(src='/javascripts/filterpage.js')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/profile.css')
 		link(rel='stylesheet', href='/stylesheets/show.css')
@@ -20,6 +21,6 @@ html
 				img(src="/images/list.png", width="20", height="20")
 			a.nav-button(href="/profile")
 				img(src="/images/user.png", width="30", height="30")
-			a.nav-button(href="/filter")
+			a.nav-button#filter(href="/filter")
 				img(src="/images/filter.png", width="30", height="30")
 		block content

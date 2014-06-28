@@ -9,4 +9,10 @@ router.get('/', function(req, res) {
   		res.redirect('/');
 });
 
+router.post( '/', function(req, res) {
+		console.log(req.body);
+		res.redirect('/home');
+});
+
+
 module.exports = router;
