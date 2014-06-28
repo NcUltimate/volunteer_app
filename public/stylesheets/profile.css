@@ -1,0 +1,19 @@
+ol li {
+	background: red;
+}
+
+
+.top-header-div {
+	width: 100%;
+	background-color:green;
+}
+
+.header-image-div {
+	width:100%;
+	text-align:center;
+}
+
+.header-name-div {
+	width:100%;
+	text-align:center;
+}
