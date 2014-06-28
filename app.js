@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var profile = require('./routes/profile');
 var filter = require( './routes/filter' );
 var show = require('./routes/show');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -27,7 +28,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(lessCompiler);
 
-app.use('/', routes);
+app.use('/', login);
+app.use('/home', routes);
 app.use('/users', users);
 app.use('/profile', profile);
 app.use('/filter', filter);

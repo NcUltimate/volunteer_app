@@ -1,0 +1,15 @@
+extends login_layout
+
+block login_content
+	.login-page
+		.login-container
+			.login-logo
+				img(src='/images/logo.gif')
+			form.login-form
+				input(type='text', defaultValue='Username')
+				input(type='password', defaultValue='Password')
+			.other-buttons
+				a(href='/home') Sign Up
+				a(href='/home') Log In
+				//input(type='submit', value="Sign Up")
+				//input(type='submit', value="Log In")
