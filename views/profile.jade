@@ -17,6 +17,8 @@ block content
 					span.span-name Brandon Porter
 				.header-image-div
 					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
+				form(method="post", action='/logout')
+					input.logout-button(type="submit", name="logoutBtn", value="Logout")
 				.collapisbleset(data-role="collapsibleset")
 					each event, idx in events
 						.collapsible(data-role="collapsible")
@@ -50,7 +52,9 @@ block content
 					span.span-name Brandon Porter
 				.header-image-div
 					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
-				div
+				form(method="post", action='/logout')
+					input.logout-button(type="submit", name="logoutBtn", value="Logout")
+				.collapisbleset
 					label(for="test") Check Test
 					input#test(type="checkbox",name="test",value="1", data-mini="true")
 					label(for="test1") Check Test 1

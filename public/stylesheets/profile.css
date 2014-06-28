@@ -36,6 +36,14 @@ div[data-role="navbar"] ul li a.ui-btn-active {
 	padding: 0px !important;
 }
 
+.collapisbleset {
+	padding-top:20px;
+}
+.logout-button {
+	background-color:#c33!important;
+	color: white !important;
+}
+
 .event-content-info-div {
 	margin-top:20px;
 	margin-bottom:20px;
