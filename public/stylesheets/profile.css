@@ -5,7 +5,7 @@ ol li {
 
 .top-header-div {
 	width: 100%;
-	background-color:green;
+	margin:50px 0px 100px 0px;
 }
 
 .header-image-div {
@@ -17,3 +17,32 @@ ol li {
 	width:100%;
 	text-align:center;
 }
+
+.span-name {
+	font-weight:bold;
+	font-size:30px;
+}
+
+.event-name-h3 {
+}
+
+.event-content-p {
+}
+
+.event-content-info-div {
+	margin-bottom:20px;
+}
+
+.event-content-image {
+	max-height:200px;
+}
+
+.info-content-span {
+	font-weight:bold;
+	font-size:20px;
+}
+
+.info-data-span {
+	font-size:12px;
+}
+

@@ -1,15 +1,138 @@
 extends layout
 
 block content
-	div(data-role="page",id="pageone")
-		div(data-role="header")
+	div(data-role="page",id="events",style="max-height:550px; overflow: auto !important")
+		div(data-role="header", style="top:60px")
 			div(data-role="navbar")
 				ul
 					li
-						a(href="#") Home
-						a(href="#") Preferences
-	div(class="top-header-div") boobs
-		div(class="header-image-div")
-			img(class="header-image", src="../images/profile-pic.jpg")
-		div(class="header-name-div")
-			span(class="span-name") Brandon Porter
+						a(href="#",class="ui-btn-active ui-state-persist",data-icon="grid") Registered Events
+					li
+						a(href="#preferences",data-icon="gear") Preferences
+		div(data-role="main",class="ui-content")
+			div(class="top-header-div")
+				div(class="header-name-div")
+					span(class="span-name") Brandon Porter
+				div(class="header-image-div")
+					img(class="header-image", src="../images/profile-pic.jpg", alt="Profile Picture")
+				div(data-role="collapsibleset")
+					div(data-role="collapsible")
+						h3(class="event-name-h3") Event Name #1
+						p(class="event-content-p")
+							div(class="event-content-image-div")
+								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
+							div(class="event-content-info-div")
+								span(class="info-content-span") Description:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Start Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") End Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Web URL:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+								div(style="height:10px")
+					div(data-role="collapsible")
+						h3(class="event-name-h3") Event Name #2
+						p(class="event-content-p")
+							div(class="event-content-image-div")
+								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
+							div(class="event-content-info-div")
+								span(class="info-content-span") Description:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Start Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") End Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Web URL:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+								div(style="height:10px")
+					div(data-role="collapsible")
+						h3(class="event-name-h3") Event Name #3
+						p(class="event-content-p")
+							div(class="event-content-image-div")
+								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
+							div(class="event-content-info-div")
+								span(class="info-content-span") Description:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Start Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") End Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Web URL:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+								div(style="height:10px")
+					div(data-role="collapsible")
+						h3(class="event-name-h3") Event Name #4
+						p(class="event-content-p")
+							div(class="event-content-image-div")
+								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
+							div(class="event-content-info-div")
+								span(class="info-content-span") Description:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Start Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") End Date:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+							div(class="event-content-info-div")
+								span(class="info-content-span") Web URL:
+								hr
+								span(class="info-data-span") Your mother was a dumb whore with a fat ass
+		div(data-role="footer")				
+	div(data-role="page",id="preferences",style="max-height:550px; overflow: auto !important")
+		div(data-role="header",style="top:60px")
+			div(data-role="navbar")
+				ul
+					li
+						a(href="#events",data-icon="grid") Registered Events
+					li
+						a(class="ui-btn-active ui-state-persist",href="#",data-icon="gear") Preferences
+		div(data-role="content",class="ui-content")
+			div(class="top-header-div")
+				div(class="header-name-div")
+					span(class="span-name") Brandon Porter
+				div(class="header-image-div")
+					img(class="header-image", src="../images/profile-pic.jpg", alt="Profile Picture")
+				div
+					label(for="boobs") Touch Boobs
+					input(type="checkbox",name="boobs",id="boobs",value="1", data-mini="true")
+					label(for="boobs1") Touch Big Boobs
+					input(type="checkbox",name="boobs1",id="boobs1",value="1",data-mini="true")
+					label(for="boobs2") Touch Big Big Boobs
+					input(type="checkbox",name="boobs2",id="boobs2",value="1",data-mini="true")
+					label(for="boobs3") Touch Big Big Big Boobs
+					input(type="checkbox",name="boobs3",id="boobs3",value="1",data-mini="true")
+					label(for="boobs4") Touch Bigger Boobs
+					input(type="checkbox",name="boobs4",id="boobs4",value="1",data-mini="true")
+					label(for="boobs5") Touch Biggest Boobs
+					input(type="checkbox",name="boobs5",id="boobs5",value="1",data-mini="true")
+					label(for="boobs6") Touch Biggest bigger Boobs
+					input(type="checkbox",name="boobs6",id="boobs6",value="1",data-mini="true")
+					label(for="boobs7") Touch FUCKING GIGANTIC Boobs
+					input(type="checkbox",name="boobs7",id="boobs7",value="1",data-mini="true")
+		div(data-role="footer")			
