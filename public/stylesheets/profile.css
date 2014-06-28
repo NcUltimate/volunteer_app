@@ -1,8 +1,7 @@
-ol li {
-	background: red;
+
+div[data-role="navbar"] ul li a.ui-btn-active {
+	background: #c33!important;
 }
-
-
 .top-header-div {
 	width: 100%;
 	margin:50px 0px 100px 0px;
