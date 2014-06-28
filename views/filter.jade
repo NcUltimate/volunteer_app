@@ -5,7 +5,7 @@ block content
 		form#formview(method='post')
 			#checklist
 				each val, idx in filters
-						h5 #{idx}
+						h4 #{idx}
 						each filter in val
 							.filter-option.white-box
 								input(type='checkbox', checked, id=filter, name=filter)
