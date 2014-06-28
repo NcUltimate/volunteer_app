@@ -1,7 +1,7 @@
 $(document).ready(function(){
           //$('#filterview').slideToggle(300);
           console.log("page ready");
-          $( '#save' ).click(clicked);
+          // $( '#save' ).click(clicked);
 	});
 
 function clicked(){
@@ -10,5 +10,6 @@ function clicked(){
 	$("input:checkbox[name=filters]:checked").each( function(){
 		selected.push( this.id );
 	});
+	$.post( '/home', {selected:selected} );
 	return selected;
 }

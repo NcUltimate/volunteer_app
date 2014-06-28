@@ -1,15 +1,14 @@
 extends layout
 
-
 block content
 	#filterview
-		form#formview
+		form#formview(method='post')
 			#checklist
 				each val, idx in filters
 						h5 #{idx}
 						each filter in val
 							.filter-option.white-box
-								input(type='checkbox', checked, id=filter, name='filters')
+								input(type='checkbox', checked, id=filter, name=filter)
 								label(for=filter) #{filter}
 			br
-		input#save(type='button', value='Save Filter')
+			input#save(type='submit', value='Save Filter')
