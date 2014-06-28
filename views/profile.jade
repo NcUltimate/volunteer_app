@@ -1,43 +1,35 @@
 extends layout
 
 block content
-	script(src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js")
-	link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css')
 	.page#events(data-role="page")
-		.top-header(data-role="header")
-			.navbar(data-role="navbar")
-				ul
-					li
-						a.ui-btn-active.ui-state-persist(href="#",data-icon="grid") Registered Events
-					li
-						a(href="#preferences",data-icon="gear") Preferences
+		// .top-header(data-role="header")
+		// 	.navbar(data-role="navbar")
+		// 		ul
+		// 			li
+		// 				a.ui-btn-active.ui-state-persist(href="#",data-icon="grid") Registered Events
+		// 			li
+		// 				a(href="#preferences",data-icon="gear") Preferences
 		.ui-content(data-role="main")
 			.top-header-div
-				.header-name-div
-					span.span-name Brandon Porter
-				.header-image-div
-					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
-				form(method="post", action='/logout')
-					input.logout-button(type="submit", name="logoutBtn", value="Logout")
+				.header.white-box
+					.header-name-div
+						span.span-name Brandon Porter
+					.header-image-div
+						img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
 				.collapisbleset(data-role="collapsibleset")
 					each event, idx in events
-						.collapsible(data-role="collapsible")
-							h3.event-name-h3 #{event.name}
-							p.event-content-p
-								.event-content-image-div
-									img.event-content-image(src=event.image, alt=event.name)
-								.event-content-info-div
-									.info-content-div Description
-									span.info-data-span #{event.desc}
-								.event-content-info-div
-									.info-content-div Start Date
-									span.info-data-span #{event.sDate}
-								.event-content-info-div
-									.info-content-div End Date
-									span.info-data-span #{event.eDate}
-								.event-content-info-div
-									.info-content-div Web URL
-									span.info-data-span #{event.webUrl}
+						.collapsible.white-box(data-role="collapsible")
+							span.picture
+								img.event-content-image(src='/images/op1.jpg', alt=event.name)
+							span.info
+								.info-name #{event.name}
+								.info-desc.info-data-span #{event.desc}
+								.dates
+									span.info-sDate.info-data-span #{event.sDate}
+									span.through through
+									span.info-eDate.info-data-span #{event.eDate}
+				form(method="post", action='/logout')
+					input.logout-button(type="submit", name="logoutBtn", value="Logout")
 	.page#preferences(data-role="page")
 		div.top-header(data-role="header")
 			.navbar(data-role="navbar")
