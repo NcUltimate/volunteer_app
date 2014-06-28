@@ -1,140 +1,69 @@
 extends layout
 
 block content
-	//script(src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js")
-	//link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css')
-	div(data-role="page",id="events",style="max-height:550px; overflow: auto !important")
-		div(data-role="header", style="top:60px")
-			div(data-role="navbar")
+	script(src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js")
+	link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css')
+	.page#events(data-role="page")
+		.top-header(data-role="header")
+			.navbar(data-role="navbar")
 				ul
 					li
-						a(href="#",class="ui-btn-active ui-state-persist",data-icon="grid") Registered Events
+						a.ui-btn-active.ui-state-persist(href="#",data-icon="grid") Registered Events
 					li
 						a(href="#preferences",data-icon="gear") Preferences
-		div(data-role="main",class="ui-content")
-			div(class="top-header-div")
-				div(class="header-name-div")
-					span(class="span-name") Brandon Porter
-				div(class="header-image-div")
-					img(class="header-image", src="../images/profile-pic.jpg", alt="Profile Picture")
-				div(data-role="collapsibleset")
-					div(data-role="collapsible")
-						h3(class="event-name-h3") Event Name #1
-						p(class="event-content-p")
-							div(class="event-content-image-div")
-								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
-							div(class="event-content-info-div")
-								span(class="info-content-span") Description:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Start Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") End Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Web URL:
-								hr
-								span(class="info-data-span") Some sample data.
-								div(style="height:10px")
-					div(data-role="collapsible")
-						h3(class="event-name-h3") Event Name #2
-						p(class="event-content-p")
-							div(class="event-content-image-div")
-								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
-							div(class="event-content-info-div")
-								span(class="info-content-span") Description:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Start Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") End Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Web URL:
-								hr
-								span(class="info-data-span") Some sample data.
-								div(style="height:10px")
-					div(data-role="collapsible")
-						h3(class="event-name-h3") Event Name #3
-						p(class="event-content-p")
-							div(class="event-content-image-div")
-								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
-							div(class="event-content-info-div")
-								span(class="info-content-span") Description:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Start Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") End Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Web URL:
-								hr
-								span(class="info-data-span") Some sample data.
-								div(style="height:10px")
-					div(data-role="collapsible")
-						h3(class="event-name-h3") Event Name #4
-						p(class="event-content-p")
-							div(class="event-content-image-div")
-								img(class="event-content-image", src="../images/profile-pic.jpg", alt="Event Name #1")
-							div(class="event-content-info-div")
-								span(class="info-content-span") Description:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Start Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") End Date:
-								hr
-								span(class="info-data-span") Some sample data.
-							div(class="event-content-info-div")
-								span(class="info-content-span") Web URL:
-								hr
-								span(class="info-data-span") Some sample data.
-	div(data-role="footer")				
-	div(data-role="page",id="preferences",style="max-height:550px; overflow: auto !important")
-		div(data-role="header",style="top:60px")
-			div(data-role="navbar")
+		.ui-content(data-role="main")
+			.top-header-div
+				.header-name-div
+					span.span-name Brandon Porter
+				.header-image-div
+					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
+				.collapisbleset(data-role="collapsibleset")
+					each event, idx in events
+						.collapsible(data-role="collapsible")
+							h3.event-name-h3 #{event.name}
+							p.event-content-p
+								.event-content-image-div
+									img.event-content-image(src=event.image, alt=event.name)
+								.event-content-info-div
+									.info-content-div Description
+									span.info-data-span #{event.desc}
+								.event-content-info-div
+									.info-content-div Start Date
+									span.info-data-span #{event.sDate}
+								.event-content-info-div
+									.info-content-div End Date
+									span.info-data-span #{event.eDate}
+								.event-content-info-div
+									.info-content-div Web URL
+									span.info-data-span #{event.webUrl}
+	.page#preferences(data-role="page")
+		div.top-header(data-role="header")
+			.navbar(data-role="navbar")
 				ul
 					li
 						a(href="#events",data-icon="grid") Registered Events
 					li
-						a(class="ui-btn-active ui-state-persist",href="#",data-icon="gear") Preferences
-		div(data-role="content",class="ui-content")
-			div(class="top-header-div")
-				div(class="header-name-div")
-					span(class="span-name") Brandon Porter
-				div(class="header-image-div")
-					img(class="header-image", src="../images/profile-pic.jpg", alt="Profile Picture")
+						a.ui-btn-active.ui-state-persist(href="#",data-icon="gear") Preferences
+		.ui-content(data-role="content")
+			.top-header-div
+				.header-name-div
+					span.span-name Brandon Porter
+				.header-image-div
+					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
 				div
-					label(for="boobs") Touch Boobs
-					input(type="checkbox",name="boobs",id="boobs",value="1", data-mini="true")
-					label(for="boobs1") Touch Big Boobs
-					input(type="checkbox",name="boobs1",id="boobs1",value="1",data-mini="true")
-					label(for="boobs2") Touch Big Big Boobs
-					input(type="checkbox",name="boobs2",id="boobs2",value="1",data-mini="true")
-					label(for="boobs3") Touch Big Big Big Boobs
-					input(type="checkbox",name="boobs3",id="boobs3",value="1",data-mini="true")
-					label(for="boobs4") Touch Bigger Boobs
-					input(type="checkbox",name="boobs4",id="boobs4",value="1",data-mini="true")
-					label(for="boobs5") Touch Biggest Boobs
-					input(type="checkbox",name="boobs5",id="boobs5",value="1",data-mini="true")
-					label(for="boobs6") Touch Biggest bigger Boobs
-					input(type="checkbox",name="boobs6",id="boobs6",value="1",data-mini="true")
-					label(for="boobs7") Touch FUCKING GIGANTIC Boobs
-					input(type="checkbox",name="boobs7",id="boobs7",value="1",data-mini="true")
-		div(data-role="footer")			
+					label(for="test") Check Test
+					input#test(type="checkbox",name="test",value="1", data-mini="true")
+					label(for="test1") Check Test 1
+					input#test1(type="checkbox",name="test1",value="1",data-mini="true")
+					label(for="test2") Check Test 2
+					input#test2(type="checkbox",name="test2",value="1",data-mini="true")
+					label(for="test3") Check Test 3
+					input#test3(type="checkbox",name="test3",value="1",data-mini="true")
+					label(for="test4") Check Test 4
+					input#test4(type="checkbox",name="test4",value="1",data-mini="true")
+					label(for="test5") Check Test 5
+					input#test5(type="checkbox",name="test5",value="1",data-mini="true")
+					label(for="test6") Check Test 6
+					input#test6(type="checkbox",name="test6",value="1",data-mini="true")
+					label(for="test7") Check Test 7
+					input#test7(type="checkbox",name="test7",value="1",data-mini="true")		

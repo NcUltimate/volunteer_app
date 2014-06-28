@@ -2,6 +2,16 @@
 div[data-role="navbar"] ul li a.ui-btn-active {
 	background: #c33!important;
 }
+
+.page {
+	max-height:550px;
+	overflow: auto !important;
+}
+
+.top-header {
+	top: 60px;
+}
+
 .top-header-div {
 	width: 100%;
 	margin:50px 0px 100px 0px;
@@ -23,12 +33,11 @@ div[data-role="navbar"] ul li a.ui-btn-active {
 }
 
 .event-name-h3 {
-}
-
-.event-content-p {
+	padding: 0px !important;
 }
 
 .event-content-info-div {
+	margin-top:20px;
 	margin-bottom:20px;
 }
 
@@ -36,7 +45,8 @@ div[data-role="navbar"] ul li a.ui-btn-active {
 	max-height:200px;
 }
 
-.info-content-span {
+.info-content-div {
+	border-bottom: 1px solid black;
 	font-weight:bold;
 	font-size:20px;
 }
