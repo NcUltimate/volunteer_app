@@ -1,4 +1,5 @@
 var express = require('express');
+var session = require('express-session')
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -11,6 +12,7 @@ var users = require('./routes/users');
 var profile = require('./routes/profile');
 var filter = require( './routes/filter' );
 var show = require('./routes/show');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -25,9 +27,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({secret: '1234567890QWERTY'}));
 app.use(lessCompiler);
 
-app.use('/', routes);
+app.use('/', login);
+app.use('/home', routes);
 app.use('/users', users);
 app.use('/profile', profile);
 app.use('/filter', filter);

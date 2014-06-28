@@ -1,0 +1,15 @@
+extends login_layout
+
+block login_content
+	.login-page
+		.login-container
+			.login-logo
+				img(src='/images/logo.gif')
+			form.login-form(method='post')
+				input(type='text', name='username', defaultValue='Username')
+				input(type='password', name='password', defaultValue='Password')
+				.other-buttons
+					input(type='submit', value="Sign Up")
+					input(type='submit', value="Log In")
+			if error != undefined
+				.error #{error}
