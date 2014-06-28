@@ -5,11 +5,11 @@ block login_content
 		.login-container
 			.login-logo
 				img(src='/images/logo.gif')
-			form.login-form
-				input(type='text', defaultValue='Username')
-				input(type='password', defaultValue='Password')
-			.other-buttons
-				a(href='/home') Sign Up
-				a(href='/home') Log In
-				//input(type='submit', value="Sign Up")
-				//input(type='submit', value="Log In")
+			form.login-form(method='post')
+				input(type='text', name='username', defaultValue='Username')
+				input(type='password', name='password', defaultValue='Password')
+				.other-buttons
+					input(type='submit', value="Sign Up")
+					input(type='submit', value="Log In")
+			if error != undefined
+				.error #{error}

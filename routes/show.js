@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('show', { title: 'Express' });
+   if(req.session.loggedIn)
+  		res.render('show', { title: 'Event Details' });
+  	else
+  		res.redirect('/');
 });
 
 module.exports = router;

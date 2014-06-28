@@ -8,7 +8,10 @@ router.get('/', function(req, res) {
 					time_of_day: ['Morning', 'Afternoon', 'Evening', 'Night'],
 					day_of_week: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 				  }
-  res.render('filter', { title: 'Filter', filters: filters });
+	if(req.session.loggedIn)
+  		res.render('filter', { title: 'Filter', filters: filters });
+  	else
+  		res.redirect('/');
 });
 
 module.exports = router;
