@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	body
+		#main-content
+			navbar.white-box
+				span#logo.nav-button
+					img(src="/images/logo.svg", width="55", height="55")
+				span.nav-button.active 	1
+				span.nav-button 2
+				span.nav-button 3
+			#map-pane
+
+

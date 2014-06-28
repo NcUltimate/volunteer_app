@@ -1,8 +1,57 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
+	overflow: hidden;
+	background: #ddd;
+	width: auto;
 }
-
-a {
-  color: #00B7FF;
+.white-box {
+	background: white;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 2px #ccc;
+	padding: 15px;
+}
+#map-container {
+	position: fixed;
+	width: 95%;
+	margin-left: -8px;
+}
+navbar {
+	width: 100%;
+	height: 25px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 5;
+}
+.nav-button {
+	display: inline-block;
+	width: 24%;
+	height: 39px;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 14px;
+	border-right: 1px solid #eee;
+	color: #555;
+	line-height: 30px;
+	transition: all 0.2s;
+	vertical-align: top;
+}
+.nav-button img {
+	margin-top: -15px;
+	margin-left: 5px;
+}
+#navbar .nav-button:first-of-type {
+	text-align: left;
+}
+.nav-button:last-of-type {
+	border:none;
+}
+.nav-button:nth-of-type(2).active {
+	border-bottom: 3px solid blue;
+}
+.nav-button:nth-of-type(3).active {
+	border-bottom: 3px solid red;
+}
+.nav-button:nth-of-type(4).active {
+	border-bottom: 3px solid orange;
 }

@@ -13,6 +13,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+app.set('port', process.env.PORT || 3000);
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -53,6 +54,10 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
+});
+
+var server = app.listen(app.get('port'), function() {
+    console.log('listening on port', app.get('port'));
 });
 
 
