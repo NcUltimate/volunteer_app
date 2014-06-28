@@ -1,0 +1,50 @@
+.op-container {
+	.op {
+		position: relative;
+		margin-top: 5px;
+		.img-container {
+			img {
+				width: 100%;
+				max-width: 1200px;
+			}
+		}
+		.organization {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			
+			background: white;
+			border: 1px solid #ccc;
+			border-top: none;
+			border-left: none;
+			padding: 5px;
+		}
+		.data-container {
+			padding: 10px;
+			.description {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0px 10px 0px 0px;
+				width: 63%;
+				font-size: 12px;
+				color: #555;
+				font-style: italic;
+			}
+			.more-info-field {
+				display: inline-block;
+				text-align: right;
+				width: 33%;
+				a {
+					background: red;
+					border: none;
+					color: white;
+					box-shadow: 0px 1px 1px #300;
+					text-decoration: none;
+					cursor: pointer;
+					font-size: 12px;
+					padding: 10px 15px;
+				}
+			}
+		}
+	}
+}
