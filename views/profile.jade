@@ -17,8 +17,7 @@ block content
 					span.span-name Brandon Porter
 				.header-image-div
 					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
-				form(method="post", action='/logout')
-					input.logout-button(type="submit", name="logoutBtn", value="Logout")
+				input.logout-button(type="button", name="logoutBtn", value="Logout", onclick="javascript: window.location.href = '/'")
 				.collapisbleset(data-role="collapsibleset")
 					each event, idx in events
 						.collapsible(data-role="collapsible")
@@ -52,8 +51,7 @@ block content
 					span.span-name Brandon Porter
 				.header-image-div
 					img.header-image(src="/images/profile-pic.jpg", alt="Profile Picture")
-				form(method="post", action='/logout')
-					input.logout-button(type="submit", name="logoutBtn", value="Logout")
+				input.logout-button(type="button", name="logoutBtn", value="Logout", onclick="javascript: window.location.href = '/'")
 				.collapisbleset
 					label(for="test") Check Test
 					input#test(type="checkbox",name="test",value="1", data-mini="true")
