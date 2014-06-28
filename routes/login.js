@@ -3,6 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
+  req.session.loggedIn = false;
   res.render('login', { title: 'Login' });
 });
 router.post('/', function(req, res) {
