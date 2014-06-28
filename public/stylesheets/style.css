@@ -10,11 +10,6 @@ body {
 	box-shadow: 1px 1px 2px #ccc;
 	padding: 15px;
 }
-#map-container {
-	position: fixed;
-	width: 95%;
-	margin-left: -8px;
-}
 navbar {
 	width: 100%;
 	height: 25px;
@@ -22,6 +17,9 @@ navbar {
 	left: 0px;
 	top: 0px;
 	z-index: 5;
+}
+navbar #logo img {
+	vertical-align: middle;
 }
 .nav-button {
 	display: inline-block;
@@ -32,26 +30,16 @@ navbar {
 	font-size: 14px;
 	border-right: 1px solid #eee;
 	color: #555;
-	line-height: 30px;
 	transition: all 0.2s;
 	vertical-align: top;
+	line-height: 40px;
 }
-.nav-button img {
+#logo img {
 	margin-top: -15px;
-	margin-left: 5px;
-}
-#navbar .nav-button:first-of-type {
-	text-align: left;
 }
 .nav-button:last-of-type {
-	border:none;
+	border: none;
 }
-.nav-button:nth-of-type(2).active {
-	border-bottom: 3px solid blue;
-}
-.nav-button:nth-of-type(3).active {
+.nav-button.active {
 	border-bottom: 3px solid red;
-}
-.nav-button:nth-of-type(4).active {
-	border-bottom: 3px solid orange;
 }
