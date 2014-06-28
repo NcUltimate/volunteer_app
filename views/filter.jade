@@ -1,15 +1,15 @@
 extends layout
 
-script(src='/public/javascripts/filter.js')
+
 block content
 	#filterview
-		form
+		form#formview
 			#checklist
 				each val, idx in filters
 						h5 #{idx}
 						each filter in val
 							.filter-option.white-box
-								input(type='checkbox', checked, id=filter)
+								input(type='checkbox', checked, id=filter, name='filters')
 								label(for=filter) #{filter}
 			br
-			a.button.white-box(type='submit', href="/", id="save") Save Filter
+		input#save(type='button', value='Save Filter')
